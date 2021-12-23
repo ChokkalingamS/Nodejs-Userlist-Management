@@ -7,7 +7,7 @@ import {ObjectId} from 'mongodb'
 const router=express.Router()
 
 
-
+// Create user
 router.route('/userlist')
 .post(async(request,response)=>
 {
@@ -23,6 +23,7 @@ router.route('/userlist')
 
 })
 
+// Get user
 router.route('/userlist')
 .get(async(request,response)=>{
     const data= await getManyUser()
@@ -33,6 +34,7 @@ router.route('/userlist')
     return response.send(data)
 })
 
+// Get user by id
 router.route('/userlist/:id')
 .get(async(request,response)=>{
     const {id}=request.params
@@ -44,6 +46,7 @@ router.route('/userlist/:id')
     return response.send(data)
 })
 
+// Edit user by id
 router.route('/userlist/:id')
 .put(async(request,response)=>{
     const {id}=request.params
@@ -58,6 +61,7 @@ router.route('/userlist/:id')
     return response.send(result)
 })
 
+// Delete user by id
 router.route('/userlist/:id')
 .delete(async(request,response)=>{
     const {id}=request.params
