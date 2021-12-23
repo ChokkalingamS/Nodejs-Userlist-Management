@@ -1,5 +1,5 @@
 import express from 'express'
-import {MongoClient} from 'Mongodb'
+import {MongoClient} from 'mongodb'
 import {userRouter} from './user.js'
 import dotenv from 'dotenv'
 import cors from 'cors'
@@ -72,6 +72,6 @@ const data=[
      "Status": "Active"
     }
    ]
-   create(data)
+//    create(data)
 
 
